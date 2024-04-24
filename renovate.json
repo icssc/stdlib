@@ -1,0 +1,19 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    "group:all",
+    "helpers:disableTypesNodeMajor",
+    "npm:unpublishSafe",
+    "schedule:monthly",
+    ":disableDependencyDashboard",
+    ":disableRateLimiting",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "commitMessageAction": ":link: Update",
+  "commitMessageTopic": "{{depName}}",
+  "dockerfile": { "enabled": false },
+  "labels": ["type: dependency"],
+  "nvm": { "enabled": false },
+  "pin": { "commitMessageSuffix": "[skip ci]" }
+}
